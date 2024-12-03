@@ -13,14 +13,17 @@ sudo apt install -y \
   clang \
   wget
 
-# download the latest release and extreact it
+# download the latest release
 rm -d -r ~/PathSenseInstaller
 wget -O ~/release.tar.gz https://github.com/CMKL-PathSense/PathSense-System-Releases/releases/download/beta/release.tar.gz
-tar -xvf ~/release.tar.gz
-rm ~/release.tar.gz
-mv ~/release ~/PathSenseInstaller
+
+# navigate to home and extract the file
+cd ~
+tar -xvf release.tar.gz
+rm release.tar.gz
+mv release PathSenseInstaller
 
 # install the release
-cd ~/PathSenseInstaller
+cd PathSenseInstaller
 chmod +x pathsense-system
 ./pathsense-system install
