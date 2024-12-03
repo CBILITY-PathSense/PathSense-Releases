@@ -21,5 +21,5 @@ mv ~/release ~/PathSenseInstaller
 
 # install the release
 cd ~/PathSenseInstaller
-chomod +x pathsense-system
+chmod +x pathsense-system
 ./pathsense-system install
