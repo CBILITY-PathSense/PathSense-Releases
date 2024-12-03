@@ -1,0 +1,16 @@
+{
+  "mean": [0.5947129726409912, 0.6019137501716614, 0.5754051804542542],
+  "std": [0.2720346450805664, 0.2733507752418518, 0.2769384980201721],
+  "classes": [
+    "clear",
+    "door  (opened)",
+    "door (closed)",
+    "object",
+    "road-crossing",
+    "stairs-down",
+    "stairs-up",
+    "wall",
+    "blur",
+    "not-blur"
+  ]
+}
