@@ -17,9 +17,9 @@ sudo apt install -y \
 wget -O ~/release.tar.gz https://github.com/CMKL-PathSense/PathSense-System-Releases/releases/download/beta/release.tar.gz
 tar -xvf ~/release.tar.gz
 rm ~/release.tar.gz
-mv ~/release pathsense_system_installer
+mv ~/release PathSenseInstaller
 
 # install the release
-cd ~/pathsense_system_installer
+cd ~/PathSenseInstaller
 chomod +x pathsense-system
 ./pathsense-system install
