@@ -6,13 +6,13 @@ Public releases for PathSense System
 ```sh
 curl https://raw.githubusercontent.com/CMKL-PathSense/PathSense-System-Releases/refs/heads/main/install.sh | sh
 ```
-- This should create a "pathsense_system_installer" in your home directory and install the system right away
+- This should create a "PathSenseInstaller" in your home directory and install the system right away
 - Reboot for the system to start automatically
 
 ## Uninstall
-- Navigate to "pathsense_system_installer" in your home directory
+- Navigate to "PathSenseInstaller" in your home directory
 ```sh
-cd ~/pathsense_system_instaler
+cd ~/PathSenseInstaller
 ```
 - Run the "remove" command
 ```sh
