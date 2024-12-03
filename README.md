@@ -6,8 +6,8 @@ Public releases for PathSense System
 ```sh
 curl https://raw.githubusercontent.com/CMKL-PathSense/PathSense-System-Releases/refs/heads/main/install.sh | sh
 ```
-- This should create a "PathSenseInstaller" in your home directory and install the system right away
-- Reboot for the system to start automatically
+- This should create a "PathSenseInstaller" directory in your home directory and install the system automatically
+- Reboot the device for the system to start automatically
 
 ## Uninstall
 - Navigate to "PathSenseInstaller" in your home directory
