@@ -15,7 +15,7 @@ sudo apt install -y \
 
 # download the latest release
 rm -d -r ~/PathSenseInstaller
-wget -O ~/release.tar.gz https://github.com/CMKL-PathSense/PathSense-System-Releases/releases/download/beta/release.tar.gz
+wget -O ~/release.tar.gz https://github.com/CMKL-PathSense/PathSense-System-Releases/releases/download/0.1.1/release.tar.gz
 
 # navigate to home and extract the file
 cd ~
