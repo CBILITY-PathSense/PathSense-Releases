@@ -20,17 +20,18 @@ sudo mkdir -p "$INSTALL_DIR"
 
 # Download the latest release tarball
 echo "=== Downloading PathSense release ==="
-wget "$RELEASE_DOWNLOAD_URL"
+wget --no-verbose -O "$(dirname "$0")/pathsense-release.tar.gz" "$RELEASE_DOWNLOAD_URL"
 
 # Untar the tarball
 echo "=== Extracting release files ==="
-tar -xvf pathsense-release.tar.gz >/dev/null
+mkdir -p "$RELEASE_DIR"
+tar -xvf pathsense-release.tar.gz -C "$RELEASE_DIR" >/dev/null
 rm pathsense-release.tar.gz
 
 # Install runtime dependencies
 echo "=== Installing runtime dependencies ==="
-chmod +x "$RELEASE_DIR/install_runtime_dependencies.sh"
-$RELEASE_DIR/install_runtime_dependencies.sh >/dev/null
+chmod +x "$RELEASE_DIR/install-runtime-dependencies.sh"
+$RELEASE_DIR/install-runtime-dependencies.sh >/dev/null
 
 # Copy files to the installation directory
 echo "=== Copying PathSense files to installation directory ==="
@@ -43,6 +44,9 @@ sudo chmod +x "$INSTALL_DIR/pathsense_system"
 echo "=== Installing systemd service ==="
 sudo cp "$RELEASE_DIR/pathsense_daemon.service" "$SERVICE_FILE"
 sudo chmod 644 "$SERVICE_FILE"
+
+# Cleanup release directory
+sudo rm -rf "$RELEASE_DIR"
 
 # Reload systemd, enable and start service
 echo "=== Starting systemd service ==="
