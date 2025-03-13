@@ -20,7 +20,7 @@ sudo mkdir -p "$INSTALL_DIR"
 
 # Download the latest release tarball
 echo "=== Downloading PathSense release ==="
-wget -O "$RELEASE_DIR/../pathsense-release.tar.gz" "$RELEASE_DOWNLOAD_URL"
+wget "$RELEASE_DOWNLOAD_URL"
 
 # Untar the tarball
 echo "=== Extracting release files ==="
