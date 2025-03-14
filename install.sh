@@ -50,9 +50,9 @@ sudo rm -rf "$RELEASE_DIR"
 
 # Create a new user with necessary permissions
 echo "=== Initializing pathsense user ==="
-id pathsense &>/dev/null || sudo useradd -r -M -G audio,video,netdev,bluetooth,dip -s /usr/sbin/nologin pathsense
-sudo echo 'KERNEL=="video*", GROUP="video", MODE="0660"' >/etc/udev/rules.d/99-camera.rules
-sudo echo 'KERNEL=="snd*", GROUP="audio", MODE="0660"' >/etc/udev/rules.d/99-audio.rules
+sudo useradd -r -M -G audio,video,netdev,bluetooth,dip,pipewire -s /usr/sbin/nologin pathsense
+# sudo echo 'KERNEL=="video*", GROUP="video", MODE="0660"' >/etc/udev/rules.d/99-camera.rules
+# sudo echo 'KERNEL=="snd*", GROUP="audio", MODE="0660"' >/etc/udev/rules.d/99-audio.rules
 
 # Reload systemd, enable and start service
 echo "=== Starting systemd service ==="
