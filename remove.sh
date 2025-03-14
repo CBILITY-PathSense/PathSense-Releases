@@ -19,4 +19,9 @@ echo "=== Removing installed files ==="
 # Remove the installation directory and all its contents
 sudo rm -rf "$INSTALL_DIR"
 
+echo "=== Deleting pathsense user ==="
+sudo userdel pathsense
+sudo rm -f /etc/udev/rules.d/99-camera.rules
+sudo rm -f /etc/udev/rules.d/99-audio.rules
+
 echo "=== PathSense has been successfully uninstalled ==="
