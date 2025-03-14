@@ -32,6 +32,6 @@ if [ ! -f "$RC_LOCAL_FILE" ]; then
 fi
 
 # Add PathSense startup command to rc.local (before exit 0)
-sudo sed -i "/^exit 0/i $INSTALL_DIR/pathsense_system &" "$RC_LOCAL_FILE"
+sudo sed -i "/^exit 0/i cd $INSTALL_DIR && ./pathsense_system &" "$RC_LOCAL_FILE"
 
 echo "=== PathSense installation complete ==="

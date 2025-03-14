@@ -2,13 +2,14 @@
 set -e
 
 # Define paths
-INSTALL_DIR="/usr/bin/pathsense"
+INSTALL_DIR="/usr/local/bin/pathsense"
 SERVICE_FILE="/etc/systemd/system/pathsense_daemon.service"
+RC_LOCAL_FILE="/etc/rc.local"
 
 echo "=== Stopping PathSense service ==="
 # Stop and disable the service
-sudo systemctl stop pathsense_daemon.service
-sudo systemctl disable pathsense_daemon.service
+sudo systemctl stop pathsense_daemon.service || true
+sudo systemctl disable pathsense_daemon.service || true
 
 echo "=== Removing systemd service ==="
 # Remove systemd service file
@@ -19,8 +20,13 @@ sudo systemctl daemon-reload
 echo "=== Removing installed files ==="
 sudo rm -rf "$INSTALL_DIR"
 
+echo "=== Removing PathSense from rc.local ==="
+if [ -f "$RC_LOCAL_FILE" ]; then
+  sudo sed -i "/pathsense_system/d" "$RC_LOCAL_FILE"
+fi
+
 echo "=== Deleting pathsense user ==="
-sudo userdel pathsense
-sudo groupdel pathsensegroup
+sudo userdel pathsense || true
+sudo groupdel pathsensegroup || true
 
 echo "=== PathSense has been successfully uninstalled ==="
