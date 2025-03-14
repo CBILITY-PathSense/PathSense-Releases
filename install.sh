@@ -11,7 +11,7 @@ sudo apt-get install -y --no-install-recommends \
 INSTALL_DIR="/usr/bin/pathsense"
 SERVICE_FILE="/etc/systemd/system/pathsense_daemon.service"
 RELEASE_DIR="$(dirname "$0")/pathsense-release"
-RELEASE_DOWNLOAD_URL="https://github.com/CMKL-PathSense/PathSense-System-Releases/releases/download/0.1.4/pathsense-release.tar.gz"
+RELEASE_DOWNLOAD_URL="https://github.com/CMKL-PathSense/PathSense-System-Releases/releases/download/0.1.5/pathsense-release.tar.gz"
 
 # Create installation directory
 echo "=== Preparing installation directories ==="
