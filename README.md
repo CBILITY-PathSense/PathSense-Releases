@@ -23,7 +23,7 @@ In the same directory, run the following command to install.
 curl https://raw.githubusercontent.com/CMKL-PathSense/PathSense-System-Releases/refs/heads/main/install.sh | sh
 ```
 
-For non-systemd devices, run `./install-legacy.sh` instead
+For non-systemd devices, run `./install-legacy.sh` instead.
 ```sh
 curl https://raw.githubusercontent.com/CMKL-PathSense/PathSense-System-Releases/refs/heads/main/install-legacy.sh | sh
 ```
