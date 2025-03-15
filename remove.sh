@@ -13,6 +13,9 @@ echo "=== Stopping PathSense service ==="
 sudo systemctl stop pathsense_daemon.service || true
 sudo systemctl disable pathsense_daemon.service || true
 
+echo "=== Disabling AIS modem ==="
+sudo poff ais || true
+
 echo "=== Removing systemd service ==="
 # Remove systemd service file
 sudo rm -f "$SERVICE_FILE"
