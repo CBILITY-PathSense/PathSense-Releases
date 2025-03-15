@@ -15,7 +15,7 @@ sudo mkdir -p "$INSTALL_DIR"
 
 # Install runtime dependencies
 echo "=== Installing runtime dependencies ==="
-chmod +x "$RELEASE_DIR/prepare-runtime.sh"
+sudo chmod +x "$RELEASE_DIR/prepare-runtime.sh"
 $RELEASE_DIR/prepare-runtime.sh >/dev/null
 
 # Copy files to the installation directory
