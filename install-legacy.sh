@@ -31,7 +31,8 @@ if [ ! -f "$RC_LOCAL_FILE" ]; then
   sudo chmod +x "$RC_LOCAL_FILE"
 fi
 
-# Add PathSense startup command to rc.local (before exit 0)
+# Add 'pon ais' and PathSense startup command to rc.local
+sudo sed -i "/^exit 0/i pon ais" "$RC_LOCAL_FILE"
 sudo sed -i "/^exit 0/i cd $INSTALL_DIR && ./pathsense_system &" "$RC_LOCAL_FILE"
 
 echo "=== PathSense installation complete ==="

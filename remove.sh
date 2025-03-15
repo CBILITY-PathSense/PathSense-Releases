@@ -22,10 +22,12 @@ sudo rm -rf "$INSTALL_DIR"
 
 echo "=== Removing PathSense from rc.local ==="
 if [ -f "$RC_LOCAL_FILE" ]; then
+  # Remove 'pon ais' and 'pathsense_system' from rc.local
+  sudo sed -i "/pon ais/d" "$RC_LOCAL_FILE"
   sudo sed -i "/pathsense_system/d" "$RC_LOCAL_FILE"
 fi
 
-echo "=== Deleting pathsense user ==="
+echo "=== Deleting pathsense user and group ==="
 sudo userdel pathsense || true
 sudo groupdel pathsensegroup || true
 
