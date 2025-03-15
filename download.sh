@@ -3,7 +3,7 @@ set -e
 
 # Define variables
 RELEASE_DIR="$(dirname "$0")/pathsense-release"
-RELEASE_DOWNLOAD_URL="https://github.com/CMKL-PathSense/PathSense-System-Releases/releases/download/0.2.0/pathsense-release.tar.gz"
+RELEASE_DOWNLOAD_URL="https://github.com/CMKL-PathSense/PathSense-System-Releases/releases/download/0.2.1/pathsense-release.tar.gz"
 
 # Clean old releases
 sudo rm -rf "$RELEASE_DIR"
