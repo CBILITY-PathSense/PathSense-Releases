@@ -6,13 +6,13 @@ INSTALL_DIR="/usr/local/bin/pathsense"
 SERVICE_FILE="/etc/systemd/system/pathsense_daemon.service"
 RC_LOCAL_FILE="/etc/rc.local"
 
-echo "=== Stopping PathSense service ==="
 # Stop and disable the service
+echo "=== Stopping PathSense service ==="
 sudo systemctl stop pathsense_daemon.service || true
 sudo systemctl disable pathsense_daemon.service || true
 
-echo "=== Removing systemd service ==="
 # Remove systemd service file
+echo "=== Removing systemd service ==="
 sudo rm -f "$SERVICE_FILE"
 sudo systemctl daemon-reload
 

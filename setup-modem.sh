@@ -19,8 +19,6 @@ if [ ! -f "$RC_LOCAL_FILE" ]; then
   echo "exit 0" | sudo tee -a "$RC_LOCAL_FILE" >/dev/null
   sudo chmod +x "$RC_LOCAL_FILE"
 fi
-
-# Add 'pon ais' to rc.local
 sudo sed -i "/^exit 0/i pon ais" "$RC_LOCAL_FILE"
 
 # Start modem connection
