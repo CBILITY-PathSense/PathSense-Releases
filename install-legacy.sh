@@ -31,6 +31,6 @@ if [ ! -f "$RC_LOCAL_FILE" ]; then
   sudo chmod +x "$RC_LOCAL_FILE"
 fi
 
-sudo sed -i "/^exit 0/i echo \"export RUST_LOG=info && cd $INSTALL_DIR && nohup ./pathsense_system > pathsense_system.log 2>&1 &\" | at now + 10 seconds" "$RC_LOCAL_FILE"
+sudo sed -i "/^exit 0/i export RUST_LOG=info && cd $INSTALL_DIR && nohup ./pathsense_system > pathsense_system.log 2>&1 &" "$RC_LOCAL_FILE"
 
 echo "=== PathSense installation complete ==="
