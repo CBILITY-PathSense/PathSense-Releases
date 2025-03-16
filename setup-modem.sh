@@ -19,7 +19,7 @@ if [ ! -f "$RC_LOCAL_FILE" ]; then
   echo "exit 0" | sudo tee -a "$RC_LOCAL_FILE" >/dev/null
   sudo chmod +x "$RC_LOCAL_FILE"
 fi
-sudo sed -i "/^exit 0/i pon ais" "$RC_LOCAL_FILE"
+sudo sed -i "/^exit 0/i echo \"pon ais\" | at now + 10 seconds" "$RC_LOCAL_FILE"
 
 # Start modem connection
 echo "=== Starting modem connection ==="
