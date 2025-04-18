@@ -19,7 +19,7 @@ Public releases for PathSense System and PathSense Daemon
 
 ## Installation
 
-Run the following command anywhere:s
+Run the following command anywhere:
 
 ```sh
 curl https://raw.githubusercontent.com/CMKL-PathSense/PathSense-System-Releases/refs/heads/main/install.sh | sh
