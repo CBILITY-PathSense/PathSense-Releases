@@ -1,4 +1,4 @@
-# PathSense-System-Releases
+# PathSense-Releases
 
 Public releases for PathSense System and PathSense Daemon
 
