@@ -8,14 +8,14 @@ Public releases for PathSense System and PathSense Daemon
 
 - Executes core operations related to PathSense functionality.
 - Interfaces with camera and other peripherals.
-- Connect to PathSense cloud services.
+- Connects to PathSense cloud services.
 
 ### PathSense Daemon
 
 - A Systemd service that controls the PathSense System.
-- Start and stop PathSense System based on power signal.
+- Starts and stops PathSense System based on power signal.
 - Dynamically disconnects some peripherals, and reduces CPU frequency to minimize power comsumption.
-- Keep PathSense System up to date.
+- Keeps PathSense System up to date.
 
 ## Installation
 
