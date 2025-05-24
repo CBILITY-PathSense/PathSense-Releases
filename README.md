@@ -1,19 +1,19 @@
 # PathSense-Releases
 
-Public releases for PathSense System and PathSense Daemon. This is designed to be installed on PathSense devices only. Other debian-based devices may work but are not officially supported and will require building from source.
+Public releases for PathSense embedded software. This is designed to be installed on PathSense devices only. Other debian-based devices may work but are not officially supported and will require building from source.
 
 ## Installation
 
 Run the following command anywhere to install:
 
 ```sh
-curl https://raw.githubusercontent.com/CMKL-PathSense/PathSense-Releases/refs/heads/main/install.sh | sh
+curl https://raw.githubusercontent.com/CBILITY-PathSense/PathSense-Releases/refs/heads/main/install.sh | sh
 ```
 
 You can also download the release without installing using:
 
 ```sh
-curl https://raw.githubusercontent.com/CMKL-PathSense/PathSense-Releases/refs/heads/main/download.sh | sh
+curl https://raw.githubusercontent.com/CBILITY-PathSense/PathSense-Releases/refs/heads/main/download.sh | sh
 ```
 
 ## Uninstallation
@@ -21,5 +21,5 @@ curl https://raw.githubusercontent.com/CMKL-PathSense/PathSense-Releases/refs/he
 Run the following command **next to the downloaded release directory** to uninstall:
 
 ```sh
-curl https://raw.githubusercontent.com/CMKL-PathSense/PathSense-Releases/refs/heads/main/remove.sh | sh
+curl https://raw.githubusercontent.com/CBILITY-PathSense/PathSense-Releases/refs/heads/main/remove.sh | sh
 ```
