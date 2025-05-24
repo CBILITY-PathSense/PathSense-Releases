@@ -4,22 +4,21 @@ Public releases for PathSense embedded software. This is designed to be installe
 
 ## Installation
 
-Run the following command anywhere to install:
-
-```sh
-curl https://raw.githubusercontent.com/CBILITY-PathSense/PathSense-Releases/refs/heads/main/install.sh | sh
-```
-
-You can also download the release without installing using:
-
+Run the following command anywhere to download:
 ```sh
 curl https://raw.githubusercontent.com/CBILITY-PathSense/PathSense-Releases/refs/heads/main/download.sh | sh
 ```
 
+Then install with the install script:
+```sh
+cd pathsense-release
+./install.sh
+```
+
 ## Uninstallation
 
-Run the following command **next to the downloaded release directory** to uninstall:
-
+ Run the remove script:
 ```sh
-curl https://raw.githubusercontent.com/CBILITY-PathSense/PathSense-Releases/refs/heads/main/remove.sh | sh
+cd pathsense-release
+./remove.sh
 ```
